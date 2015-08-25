@@ -18,9 +18,9 @@ git push -u origin master
 * Gravatar
 
   [Gravatar: Developer Resources](http://en.gravatar.com/site/implement/)
-  
+
   + How to generate MD5 file hash on javascript?
-    
+
     [How to generate MD5 file hash on javascript?](http://stackoverflow.com/questions/14733374/how-to-generate-md5-file-hash-on-javascript)
     [Google: crypto-js](https://code.google.com/p/crypto-js/#MD5)
 
@@ -31,3 +31,9 @@ git push -u origin master
 * Workflow
 
   [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/)
+
+* References
+
+  [Web Developer Portfolio Examples](http://www.barryclark.co/portfolio-examples/)
+
+  [Coby Chapple](http://cobyism.com/)
