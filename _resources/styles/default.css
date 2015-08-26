@@ -1,0 +1,155 @@
+@charset "UTF-8";
+* {
+  font-size: 18px;
+  font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: #333; }
+
+.small {
+  font-size: 0.8em; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End hide from IE-mac */
+body {
+  background: linear-gradient(270deg, #a24bcf, #4b79cf, #4bc5cf);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 40s ease infinite;
+  -moz-animation: AnimationName 40s ease infinite;
+  -o-animation: AnimationName 40s ease infinite;
+  animation: AnimationName 40s ease infinite; }
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+header {
+  max-width: 700px;
+  margin: 1.2rem auto 0 auto;
+  padding: 0; }
+  header ul {
+    float: right;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    list-style: none; }
+    header ul li {
+      display: inline;
+      margin: 0 2rem; }
+      header ul li a:link,
+      header ul li a:visited {
+        color: #FAFAFA;
+        text-decoration: none; }
+      header ul li a:hover,
+      header ul li a:active {
+        color: #FAFAFA;
+        text-decoration: underline; }
+  header h1 {
+    display: block;
+    float: left;
+    width: 25rem;
+    margin: 0;
+    padding: 0; }
+    header h1 a:link,
+    header h1 a:visited {
+      color: #FAFAFA;
+      text-decoration: none;
+      letter-spacing: -0.5px; }
+    header h1 a:hover,
+    header h1 a:active {
+      color: #FAFAFA;
+      text-decoration: underline; }
+
+#avatar-1 {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  margin: 0 1rem 0 0;
+  padding: 0;
+  content: " ";
+  font-size: 0;
+  border: 5px solid #FFF;
+  border-radius: 20%;
+  vertical-align: middle; }
+
+header + .section-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem; }
+
+section {
+  padding: 1.8em 0 0 0;
+  line-height: 1.8em; }
+
+#summary {
+  padding-bottom: 2em; }
+  #summary pre a:link,
+  #summary pre a:visited {
+    color: #483D8B;
+    text-decoration: none;
+    font: bold 1em/1.2 monospace; }
+  #summary pre a:hover,
+  #summary pre a:active {
+    color: #483D8B;
+    text-decoration: underline;
+    font: bold 1em/1.2 monospace; }
+
+#projects h2 {
+  color: #FAFAFA; }
+
+footer {
+  max-width: 700px;
+  margin: 1.8rem auto 3.6rem auto;
+  padding: 0; }
+  footer p {
+    text-align: center;
+    font: 0.9em/1.2 monospace; }
+    footer p a:link,
+    footer p a:visited {
+      color: #333;
+      text-decoration: none;
+      font: 0.9em/1.2 monospace; }
+    footer p a:hover,
+    footer p a:active {
+      color: #333;
+      text-decoration: underline;
+      font: 0.9em/1.2 monospace; }
+
+/*# sourceMappingURL=default.css.map */

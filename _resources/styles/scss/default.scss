@@ -1,0 +1,193 @@
+//variables
+$font-basic:#333;
+
+//default
+* {
+    font-size:18px;
+    font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color:$font-basic;
+}
+.small {
+    font-size:0.8em;
+}
+
+//import
+@import "clearfix.scss";
+
+//background
+body {
+    background: linear-gradient(270deg, #a24bcf, #4b79cf, #4bc5cf);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 40s ease infinite;
+    -moz-animation: AnimationName 40s ease infinite;
+    -o-animation: AnimationName 40s ease infinite;
+    animation: AnimationName 40s ease infinite;
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+}
+
+//header
+header {
+    max-width:700px;
+    margin:1.2rem auto 0 auto;
+    padding:0;
+
+    $font-color: #FAFAFA;
+    @mixin header-link-default {
+        color: $font-color;
+        text-decoration: none;
+    }
+    @mixin header-link-hover {
+        color: $font-color;
+        text-decoration: underline;
+    }
+
+    ul {
+        float:right;
+        margin:1.5rem 0 0 0;
+        padding:0;
+        list-style: none;
+
+        li {
+            display: inline;
+            margin:0 2rem;
+
+            a:link,
+            a:visited {
+                @include header-link-default;
+            }
+            a:hover,
+            a:active {
+                @include header-link-hover;
+            }
+        }
+    }
+    h1 {
+        display:block;
+        float:left;
+        width:25rem;
+        margin:0;
+        padding:0;
+
+        a:link,
+        a:visited {
+            @include header-link-default;
+            letter-spacing:-0.5px;
+        }
+        a:hover,
+        a:active {
+            @include header-link-hover;
+        }
+    }
+}
+#avatar-1 {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin:0 1rem 0 0;
+    padding:0;
+    content: " ";
+    font-size: 0;
+    border: 5px solid #FFF;
+    border-radius: 20%;
+    vertical-align: middle;
+}
+
+//section
+header + .section-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+section {
+    padding:1.8em 0 0 0;
+    line-height: 1.8em;
+}
+
+//summary
+#summary {
+    padding-bottom: 2em;
+
+    $summary-font: bold 1em/1.2 monospace;
+    $summary-color: #483D8B;
+    @mixin summary-link-default {
+        color: $summary-color;
+        text-decoration: none;
+        font: $summary-font;
+    }
+    @mixin summary-link-hover {
+        color: $summary-color;
+        text-decoration: underline;
+        font: $summary-font;
+    }
+
+    pre {
+        a:link,
+        a:visited {
+            @include summary-link-default;
+        }
+        a:hover,
+        a:active {
+            @include summary-link-hover;
+        }
+    }
+}
+
+//projects
+#projects {
+    h2 {
+        color:#FAFAFA;
+    }
+
+}
+
+//footer
+footer {
+    max-width:700px;
+    margin:1.8rem auto 3.6rem auto;
+    padding:0;
+
+    $footer-font: 0.9em/1.2 monospace;
+    @mixin footer-link-default {
+        color: $font-basic;
+        text-decoration: none;
+        font: $footer-font;
+    }
+    @mixin footer-link-hover {
+        color: $font-basic;
+        text-decoration: underline;
+        font: $footer-font;
+    }
+
+    p {
+        text-align:center;
+        font: $footer-font;
+
+        a:link,
+        a:visited {
+            @include footer-link-default;
+        }
+        a:hover,
+        a:active {
+            @include footer-link-hover;
+        }
+    }
+}
