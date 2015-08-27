@@ -27,6 +27,7 @@ $ sass --watch styles/scss:styles
 
 ### Github Pages
   - [Setting up a custom domain with GitHub Pages](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/)
+  - [Files that start with an underscore are missing](https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/)
 
 ### Bootstrap 3
   - [Bootstrap: Getting started](http://getbootstrap.com/getting-started/)
