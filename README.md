@@ -44,7 +44,6 @@ $ sass --watch styles/scss:styles
 ### CSS
   - [CSS Selector Reference](http://www.w3schools.com/cssref/css_selectors.asp)
   - [Lessons Learned Concerning the Clearfix CSS Hack](https://perishablepress.com/lessons-learned-concerning-the-clearfix-css-hack/)
-  - [CSS GRADIENT ANIMATOR](http://www.gradient-animator.com/)
 
 ### Workflow
   - [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/)

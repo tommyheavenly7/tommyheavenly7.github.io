@@ -1,11 +1,16 @@
 @charset "UTF-8";
 * {
-  font-size: 18px;
+  font-size: 16px;
   font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   color: #333; }
 
 .small {
   font-size: 0.8em; }
+
+#pageup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px; }
 
 .clearfix:after {
   visibility: hidden;
@@ -26,61 +31,32 @@
   display: block; }
 
 /* End hide from IE-mac */
-body {
-  background: linear-gradient(270deg, #a24bcf, #4b79cf, #4bc5cf);
-  background-size: 600% 600%;
-  -webkit-animation: AnimationName 40s ease infinite;
-  -moz-animation: AnimationName 40s ease infinite;
-  -o-animation: AnimationName 40s ease infinite;
-  animation: AnimationName 40s ease infinite; }
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-@-o-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+  html body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+  html #container-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: 200% 200%; }
+
+#container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1em 1.5em; }
+
 header {
   max-width: 700px;
-  margin: 1.2rem auto 0 auto;
+  margin: 0 auto;
   padding: 0; }
-  header ul {
-    float: right;
-    margin: 1.2rem 0 0 0;
-    padding: 0;
-    list-style: none; }
-    header ul li {
-      display: inline;
-      margin: 0 2rem; }
-      header ul li a:link,
-      header ul li a:visited {
-        color: #FAFAFA;
-        text-decoration: none; }
-      header ul li a:hover,
-      header ul li a:active {
-        color: #FAFAFA;
-        text-decoration: underline; }
   header h1 {
     display: block;
     float: left;
@@ -89,13 +65,29 @@ header {
     padding: 0; }
     header h1 a:link,
     header h1 a:visited {
-      color: #FAFAFA;
+      color: #333;
       text-decoration: none;
       letter-spacing: -0.5px; }
     header h1 a:hover,
     header h1 a:active {
-      color: #FAFAFA;
+      color: #333;
       text-decoration: underline; }
+  header ul {
+    float: right;
+    margin: 1.2rem 0 0 0;
+    padding: 0;
+    list-style: none; }
+    header ul li {
+      display: inline-block;
+      margin: 0 0.5em; }
+      header ul li a:link,
+      header ul li a:visited {
+        color: #333;
+        text-decoration: none; }
+      header ul li a:hover,
+      header ul li a:active {
+        color: #333;
+        text-decoration: underline; }
 
 #avatar-1 {
   display: inline-block;
@@ -105,34 +97,44 @@ header {
   padding: 0;
   content: " ";
   font-size: 0;
-  border: 5px solid #FFF;
+  border: 5px solid #FAFAFA;
   border-radius: 20%;
   vertical-align: middle; }
 
-header + .section-wrapper {
+section {
   max-width: 700px;
   margin: 0 auto;
-  padding: 1.5rem; }
-
-section {
-  padding: 1.8em 0 0 0;
+  padding: 3.2em 0 0.5em 0;
   line-height: 1.8em; }
 
 #summary {
-  padding-bottom: 2em; }
+  padding-bottom: 1em; }
   #summary pre a:link,
   #summary pre a:visited {
     color: #483D8B;
     text-decoration: none;
-    font: bold 1em/1.2 monospace; }
+    font: bold 1em/1.2 monospace;
+    letter-spacing: 1px; }
   #summary pre a:hover,
   #summary pre a:active {
     color: #483D8B;
     text-decoration: underline;
-    font: bold 1em/1.2 monospace; }
+    font: bold 1em/1.2 monospace;
+    letter-spacing: 1px; }
 
 #projects h2 {
-  color: #FAFAFA; }
+  font-size: 2.4em;
+  color: #333;
+  text-align: center; }
+
+#contact {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1em 0 0 0; }
+  #contact h2 {
+    margin: 4em 0 1.2em 0;
+    font-size: 2.4em;
+    text-align: center; }
 
 footer {
   max-width: 700px;

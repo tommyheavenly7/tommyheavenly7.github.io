@@ -3,83 +3,61 @@ $font-basic:#333;
 
 //default
 * {
-    font-size:18px;
+    font-size:16px;
     font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     color:$font-basic;
 }
 .small {
     font-size:0.8em;
 }
+#pageup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
 
 //import
 @import "clearfix.scss";
 
 //background
-body {
-    background: linear-gradient(270deg, #a24bcf, #4b79cf, #4bc5cf);
-    background-size: 600% 600%;
-    -webkit-animation: AnimationName 40s ease infinite;
-    -moz-animation: AnimationName 40s ease infinite;
-    -o-animation: AnimationName 40s ease infinite;
-    animation: AnimationName 40s ease infinite;
-    @-webkit-keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
+@mixin bg-basic {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+html {
+    @include bg-basic;
+    body {
+        @include bg-basic;
     }
-    @-moz-keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
+    #container-wrapper {
+        @include bg-basic;
+        background-size: 200% 200%;
     }
-    @-o-keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-    @keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
+}
+#container {
+    max-width:700px;
+    margin:0 auto;
+    padding:1em 1.5em;
 }
 
 //header
 header {
     max-width:700px;
-    margin:1.2rem auto 0 auto;
+    margin:0 auto;
     padding:0;
 
     $font-color: #FAFAFA;
     @mixin header-link-default {
-        color: $font-color;
+        color: $font-basic;
         text-decoration: none;
     }
     @mixin header-link-hover {
-        color: $font-color;
+        color: $font-basic;
         text-decoration: underline;
     }
 
-    ul {
-        float:right;
-        margin:1.2rem 0 0 0;
-        padding:0;
-        list-style: none;
-
-        li {
-            display: inline;
-            margin:0 2rem;
-
-            a:link,
-            a:visited {
-                @include header-link-default;
-            }
-            a:hover,
-            a:active {
-                @include header-link-hover;
-            }
-        }
-    }
     h1 {
         display:block;
         float:left;
@@ -97,6 +75,26 @@ header {
             @include header-link-hover;
         }
     }
+    ul {
+        float:right;
+        margin:1.2rem 0 0 0;
+        padding:0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin:0 0.5em;
+
+            a:link,
+            a:visited {
+                @include header-link-default;
+            }
+            a:hover,
+            a:active {
+                @include header-link-hover;
+            }
+        }
+    }
 }
 #avatar-1 {
     display: inline-block;
@@ -106,25 +104,22 @@ header {
     padding:0;
     content: " ";
     font-size: 0;
-    border: 5px solid #FFF;
+    border: 5px solid #FAFAFA;
     border-radius: 20%;
     vertical-align: middle;
 }
 
 //section
-header + .section-wrapper {
+section {
     max-width: 700px;
     margin: 0 auto;
-    padding: 1.5rem;
-}
-section {
-    padding:1.8em 0 0 0;
+    padding: 3.2em 0 0.5em 0;
     line-height: 1.8em;
 }
 
 //summary
 #summary {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 
     $summary-font: bold 1em/1.2 monospace;
     $summary-color: #483D8B;
@@ -132,11 +127,13 @@ section {
         color: $summary-color;
         text-decoration: none;
         font: $summary-font;
+        letter-spacing:1px;
     }
     @mixin summary-link-hover {
         color: $summary-color;
         text-decoration: underline;
         font: $summary-font;
+        letter-spacing:1px;
     }
 
     pre {
@@ -154,9 +151,24 @@ section {
 //projects
 #projects {
     h2 {
-        color:#FAFAFA;
+        font-size: 2.4em;
+        color: $font-basic;
+        text-align: center;
     }
 
+}
+
+//contact
+#contact {
+    max-width:700px;
+    margin:0 auto;
+    padding:1em 0 0 0;
+
+    h2 {
+        margin:4em 0 1.2em 0;
+        font-size: 2.4em;
+        text-align: center;
+    }
 }
 
 //footer
