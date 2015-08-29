@@ -1,5 +1,6 @@
 # tommyheavenly7.github.io
 
+
 ## How to reate a new repository on the command line
 ```
 echo "# tommyheavenly7.github.io" >> README.md
@@ -34,8 +35,8 @@ $ sass --watch styles/scss:styles
 
 ### Gravatar
   - [Gravatar: Developer Resources](http://en.gravatar.com/site/implement/)
-  + [How to generate MD5 file hash on javascript?](http://stackoverflow.com/questions/14733374/how-to-generate-md5-file-hash-on-javascript)
-  + [Google: crypto-js](https://code.google.com/p/crypto-js/#MD5)
+    + [How to generate MD5 file hash on javascript?](http://stackoverflow.com/questions/14733374/how-to-generate-md5-file-hash-on-javascript)
+    + [Google: crypto-js](https://code.google.com/p/crypto-js/#MD5)
 
 ### Markdown
   - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
@@ -50,6 +51,3 @@ $ sass --watch styles/scss:styles
 
 ### Examples
   - [Web Developer Portfolio Examples](http://www.barryclark.co/portfolio-examples/)
-  - [Coby Chapple](http://cobyism.com/)
-  - [PIERRE.IO](http://pierre.io/)
-  - [WE AIN'T PLASTIC](http://weaintplastic.com/)

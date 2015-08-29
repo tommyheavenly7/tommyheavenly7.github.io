@@ -2,15 +2,31 @@
 * {
   font-size: 16px;
   font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  color: #333; }
+  color: #333;
+  line-height: 1.6em; }
+
+@media only screen and (min-width: 768px) {
+  * {
+    font-size: 18px;
+    font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.8em; } }
+h2 {
+  font-size: 1.4em; }
 
 .small {
   font-size: 0.8em; }
 
 #pageup {
   position: fixed;
-  bottom: 30px;
-  right: 30px; }
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.5; }
+  #pageup span {
+    font-size: 32px;
+    vertical-align: bottom; }
+  #pageup:hover {
+    opacity: 1; }
 
 .clearfix:after {
   visibility: hidden;
@@ -31,31 +47,14 @@
   display: block; }
 
 /* End hide from IE-mac */
-html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0; }
-  html body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0; }
-  html #container-wrapper {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: 200% 200%; }
-
-#container {
+#content-wrapper {
   max-width: 700px;
   margin: 0 auto;
   padding: 1em 1.5em; }
 
 header {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 1em auto;
   padding: 0; }
   header h1 {
     display: block;
@@ -66,20 +65,20 @@ header {
     header h1 a:link,
     header h1 a:visited {
       color: #333;
-      text-decoration: none;
-      letter-spacing: -0.5px; }
+      text-decoration: none; }
     header h1 a:hover,
     header h1 a:active {
       color: #333;
       text-decoration: underline; }
   header ul {
     float: right;
-    margin: 1.2rem 0 0 0;
+    margin: 0;
     padding: 0;
     list-style: none; }
     header ul li {
       display: inline-block;
-      margin: 0 0.5em; }
+      margin: 0 0.5em;
+      vertical-align: middle; }
       header ul li a:link,
       header ul li a:visited {
         color: #333;
@@ -88,6 +87,10 @@ header {
       header ul li a:active {
         color: #333;
         text-decoration: underline; }
+    header ul .mailto {
+      margin: 0;
+      font-size: 22px;
+      vertical-align: middle; }
 
 #avatar-1 {
   display: inline-block;
@@ -97,35 +100,27 @@ header {
   padding: 0;
   content: " ";
   font-size: 0;
-  border: 5px solid #FAFAFA;
+  border: 3px solid #EFEFEF;
   border-radius: 20%;
   vertical-align: middle; }
 
 section {
   max-width: 700px;
-  margin: 0 auto;
-  padding: 3.2em 0 0.5em 0;
-  line-height: 1.8em; }
+  margin: 1.2em auto 1.6em auto;
+  padding: 0; }
 
 #summary {
   padding-bottom: 1em; }
-  #summary pre a:link,
-  #summary pre a:visited {
-    color: #483D8B;
-    text-decoration: none;
-    font: bold 1em/1.2 monospace;
-    letter-spacing: 1px; }
-  #summary pre a:hover,
-  #summary pre a:active {
-    color: #483D8B;
-    text-decoration: underline;
-    font: bold 1em/1.2 monospace;
-    letter-spacing: 1px; }
+  #summary .name {
+    font-weight: bold; }
 
 #projects h2 {
-  font-size: 2.4em;
+  margin: 1em 0 0.5em 0;
+  font-size: 1.4em;
   color: #333;
   text-align: center; }
+#projects p {
+  font-size: 0.8em; }
 
 #contact {
   max-width: 700px;
@@ -133,8 +128,13 @@ section {
   padding: 1em 0 0 0; }
   #contact h2 {
     margin: 4em 0 1.2em 0;
-    font-size: 2.4em;
+    font-size: 1.4em;
+    color: #333;
     text-align: center; }
+  #contact .mailto {
+    margin: 0;
+    font-size: 25px;
+    vertical-align: middle; }
 
 footer {
   max-width: 700px;
