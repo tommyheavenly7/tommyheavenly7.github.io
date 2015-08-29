@@ -29,7 +29,7 @@ h2 {
 }
 #pageup {
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
     opacity: 0.5;
 
@@ -167,6 +167,9 @@ section {
         margin:0;
         font-size:25px;
         vertical-align:middle;
+    }
+    th {
+        white-space: nowrap;
     }
 }
 
