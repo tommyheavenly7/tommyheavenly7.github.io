@@ -19,7 +19,7 @@ h2 {
 
 #pageup {
   position: fixed;
-  bottom: 20px;
+  bottom: 40px;
   right: 20px;
   opacity: 0.5; }
   #pageup span {
@@ -135,6 +135,8 @@ section {
     margin: 0;
     font-size: 25px;
     vertical-align: middle; }
+  #contact th {
+    white-space: nowrap; }
 
 footer {
   max-width: 700px;
