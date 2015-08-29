@@ -1,42 +1,53 @@
-//variables
+//variables and mixins
 $font-basic:#333;
+@mixin heading-h2 {
+    font-size: 1.4em;
+    color: $font-basic;
+    text-align: center;
+}
 
 //default
 * {
     font-size:16px;
     font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     color:$font-basic;
+    line-height: 1.6em;
+}
+@media only screen and (min-width:768px) {
+    * {
+        font-size:18px;
+        font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        color:$font-basic;
+        line-height: 1.8em;
+    }
+}
+h2 {
+    font-size:1.4em;
 }
 .small {
     font-size:0.8em;
 }
 #pageup {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.5;
+
+    span {
+        font-size:32px;
+        vertical-align:bottom;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 //import
 @import "clearfix.scss";
 
 //background
-@mixin bg-basic {
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
-}
-html {
-    @include bg-basic;
-    body {
-        @include bg-basic;
-    }
-    #container-wrapper {
-        @include bg-basic;
-        background-size: 200% 200%;
-    }
-}
-#container {
+#content-wrapper {
     max-width:700px;
     margin:0 auto;
     padding:1em 1.5em;
@@ -45,7 +56,7 @@ html {
 //header
 header {
     max-width:700px;
-    margin:0 auto;
+    margin:0 auto 1em auto;
     padding:0;
 
     $font-color: #FAFAFA;
@@ -68,7 +79,6 @@ header {
         a:link,
         a:visited {
             @include header-link-default;
-            letter-spacing:-0.5px;
         }
         a:hover,
         a:active {
@@ -77,13 +87,14 @@ header {
     }
     ul {
         float:right;
-        margin:1.2rem 0 0 0;
+        margin:0;
         padding:0;
         list-style: none;
 
         li {
             display: inline-block;
             margin:0 0.5em;
+            vertical-align:middle;
 
             a:link,
             a:visited {
@@ -93,6 +104,11 @@ header {
             a:active {
                 @include header-link-hover;
             }
+        }
+        .mailto {
+            margin:0;
+            font-size:22px;
+            vertical-align:middle;
         }
     }
 }
@@ -104,7 +120,7 @@ header {
     padding:0;
     content: " ";
     font-size: 0;
-    border: 5px solid #FAFAFA;
+    border: 3px solid #EFEFEF;
     border-radius: 20%;
     vertical-align: middle;
 }
@@ -112,50 +128,29 @@ header {
 //section
 section {
     max-width: 700px;
-    margin: 0 auto;
-    padding: 3.2em 0 0.5em 0;
-    line-height: 1.8em;
+    margin: 1.2em auto 1.6em auto;
+    padding: 0;
 }
 
 //summary
 #summary {
     padding-bottom: 1em;
 
-    $summary-font: bold 1em/1.2 monospace;
-    $summary-color: #483D8B;
-    @mixin summary-link-default {
-        color: $summary-color;
-        text-decoration: none;
-        font: $summary-font;
-        letter-spacing:1px;
-    }
-    @mixin summary-link-hover {
-        color: $summary-color;
-        text-decoration: underline;
-        font: $summary-font;
-        letter-spacing:1px;
-    }
-
-    pre {
-        a:link,
-        a:visited {
-            @include summary-link-default;
-        }
-        a:hover,
-        a:active {
-            @include summary-link-hover;
-        }
+    .name {
+        font-weight: bold;
     }
 }
 
 //projects
 #projects {
     h2 {
-        font-size: 2.4em;
-        color: $font-basic;
-        text-align: center;
+        margin:1em 0 0.5em 0;
+        @include heading-h2;
     }
 
+    p {
+        font-size:0.8em;
+    }
 }
 
 //contact
@@ -166,8 +161,12 @@ section {
 
     h2 {
         margin:4em 0 1.2em 0;
-        font-size: 2.4em;
-        text-align: center;
+        @include heading-h2;
+    }
+    .mailto {
+        margin:0;
+        font-size:25px;
+        vertical-align:middle;
     }
 }
 
