@@ -1,7 +1,7 @@
 # tommyheavenly7.github.io
 
 
-## How to reate a new repository on the command line
+## How to create a new repository on the command line
 ```
 echo "# tommyheavenly7.github.io" >> README.md
 git init
